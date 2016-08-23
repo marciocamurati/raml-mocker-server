@@ -5,7 +5,7 @@ var _ = require('lodash');
 var express = require('express');
 var cors = require('cors');
 var chokidar = require('chokidar');
-var ramlMocker = require('raml-mocker');
+var ramlMocker = require('raml-1-mocker');
 
 var options;
 var requestsMap = {};

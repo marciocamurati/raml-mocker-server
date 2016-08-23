@@ -26,7 +26,7 @@
     "cors": "^2.7.1",
     "express": "^4.13.3",
     "lodash": "^3.10.1",
-    "raml-mocker": "^0.2.0"
+    "raml-1-mocker": "^0.1.2"
   },
   "devDependencies": {
     "q": "^1.1.2"
