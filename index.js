@@ -140,6 +140,11 @@ function addRoute (reqToMock){
 						example || mock :
 						mock || example || '';
 
+				// fix: replace null string to be null object
+				if (response)	{
+						response = JSON.stringify(response).replace(/[\'|\"]null[\'|\"]/g,'null');
+				}
+
 				res.setHeader('content-type', 'application/json');
 				res.status(mockObj.defaultCode || 200).send(response);
 			} else {
