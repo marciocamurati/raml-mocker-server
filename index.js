@@ -31,7 +31,13 @@ var colors = {default: '\x1b[0m', green: '\x1b[32m', qyan: '\x1b[36m'};
 function init (prefs, callback) {
 	options = _.extend(defaults, prefs);
 	app = options.app || express();
-	app.use(cors());
+
+	app.use(function(req, res, next) {
+		res.header("Access-Control-Allow-Origin", "*");
+		res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+		res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+	  next();
+	});
 
 	ramlMocker.generate(options, process(function(requestsToMock){
 		requestsToMock.forEach(function(reqToMock){
