@@ -23,7 +23,7 @@
   "license": "MIT",
   "dependencies": {
     "chokidar": "^0.12.6",
-    "cors": "^2.7.1",
+    "cors": "^2.8.0",
     "express": "^4.13.3",
     "lodash": "^3.10.1",
     "raml-1-mocker": "^0.1.2"
